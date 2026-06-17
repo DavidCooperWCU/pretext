@@ -13920,6 +13920,7 @@ TODO:
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
         <script src="{$html.js.dir}/gdscript-prism.js"></script>
+        <script src="{$html.js.dir}/pyret-prism.js"></script>
         
         
 

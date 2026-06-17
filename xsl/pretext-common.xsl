@@ -8034,6 +8034,7 @@ Book (with parts), "section" at level 3
     <language ptx="lua"         active=""            listings="Lua"              prism="lua"/>
     <language ptx="pascal"      active=""            listings="Pascal"           prism="pascal"/>
     <language ptx="perl"        active=""            listings="Perl"             prism="perl"/>
+    <language ptx="pyret"       active=""            listings=""                 prism="pyret"/>
     <language ptx="python"      active="python"      listings="Python"           prism="py"/>
     <language ptx="python3"     active="python3"     listings="Python"           prism="py"/>
     <language ptx="r"           active=""            listings="R"                prism="r"/>
