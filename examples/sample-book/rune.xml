@@ -96,6 +96,30 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <p>Programs in supported languages are made interactive in HTML when <attr>interactive</attr> is set to <c>activecode</c>. Some languages can be made interactive on any server, while others require being served from Runestone servers. See <url href="https://pretextbook.org/doc/guide/html/topic-program-console.html#interactive-program-capabilities">Interactive Programs Capabilities in the PreTeXt Guide</url> for a list of what languages are supported in which environs.</p>
 
+        
+        <listing xml:id="program-activecode-pyret">
+            <title>An interactive Pyret program, using <pubtitle>Runestone</pubtitle></title>
+            <program xml:id="pyret-hello-world" interactive='activecode' language="pyret" label="hello-world-pyret">
+                <code>
+                print("Hello, World!")
+                </code>
+            </program>
+        </listing>
+
+        <listing xml:id="program-activecode-pyret-test">
+            <title>An interactive Pyret program with a test, using <pubtitle>Runestone</pubtitle></title>
+            <program xml:id="pyret-with-test" interactive='activecode' language="pyret" label="testing-pyret">
+                <code>
+                # set x to 'test'
+                x = "change me"
+                </code>
+                
+                <tests>
+                check: x is 'test' end
+                </tests>
+            </program>
+        </listing>
+
         <listing xml:id="program-activecode-python">
             <title>An interactive Python program, using <pubtitle>Runestone</pubtitle></title>
             <program xml:id="python-hello-world" interactive='activecode' language="python" label="hello-world">
@@ -227,14 +251,31 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     func _build_checks() -&gt; void:
                         var practice_slot = _practice
 
-                        var c1 := Check.new()
-                        c1.description = "Run graphical program"
-                        c1.checker = func() -&gt; String:
+                        var c3 := Check.new()
+                        c3.description = "Run graphical program"
+                        c3.checker = func() -&gt; String:
                             return ""
                         
-                        
+                        var c1 := Check.new()
+                        c1.description = "Check 1"
 
-                        checks.append_array([c1])
+                        var c1_1 := Check.new()
+                        c1_1.description = "Check 1.1 Sub"
+                        c1_1.checker = func() -> String: return "Check 1.1 Hint"
+                        c1.subchecks.push_back(c1_1)
+
+                        var c1_2 := Check.new()
+                        c1_2.description = "Check 1.2 Sub"
+                        c1_2.checker = func() -> String: return "Check 1.2 Hint"
+                        c1.subchecks.push_back(c1_2)
+
+                        var c2 := Check.new()
+                        c2.description = "Check 2 (Depends)"
+                        c2.checker = func() -> String: return "Check 2 Hint"
+                        c2.dependencies.push_back(c1)
+                        checks.append_array([c1, c2,c3])
+
+                        
 
                 </tests>
             </program>

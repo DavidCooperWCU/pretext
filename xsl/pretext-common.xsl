@@ -8034,7 +8034,6 @@ Book (with parts), "section" at level 3
     <language ptx="lua"         active=""            listings="Lua"              prism="lua"/>
     <language ptx="pascal"      active=""            listings="Pascal"           prism="pascal"/>
     <language ptx="perl"        active=""            listings="Perl"             prism="perl"/>
-    <language ptx="pyret"       active=""            listings=""                 prism="pyret"/>
     <language ptx="python"      active="python"      listings="Python"           prism="py"/>
     <language ptx="python3"     active="python3"     listings="Python"           prism="py"/>
     <language ptx="r"           active=""            listings="R"                prism="r"/>
@@ -8051,6 +8050,7 @@ Book (with parts), "section" at level 3
     <language ptx="elisp"       active=""            listings="Lisp"             prism="elisp"/>
     <language ptx="scheme"      active=""            listings="Lisp"             prism="scheme"/>
     <language ptx="racket"      active=""            listings="Lisp"             prism="racket"/>
+    <language ptx="pyret"       active="pyret"      listings=""                 prism="pyret"/>
     <language ptx="sql"         active="sql"         listings="SQL"              prism="sql"/>
     <language ptx="llvm"        active=""            listings="LLVM"             prism="llvm"/>
     <language ptx="matlab"      active=""            listings="Matlab"           prism="matlab"/>
