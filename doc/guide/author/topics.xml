@@ -4032,6 +4032,8 @@
                 <p>When evaluated, the program output and test <tag>output</tag> will have leading and trailing spaces removed. Other than that spacing, the two must match exactly to be considered a "passed" test.</p>
 
                 <p>GDScript has it's own way to test based on the GDPractice addon library. You can look at the <url href="https://github.com/WCU-CS-CooperLab/godot-docs-pretext/tree/master/lessons">lessons</url> folder of <url href="https://github.com/WCU-CS-CooperLab/godot-docs-pretext/">Godot Docs Pretext</url> to see an example.</p>
+
+                <p>Pyret uses the check directive to do unit tests, and this can be seen in the html and runestune versions of the PreTeXt output.</p>
             </subsubsection>
         </subsection>
 
@@ -4072,8 +4074,8 @@
                     <row>
                         <cell>GDScript</cell>
                         <cell><c>gdscript</c></cell>
-                        <cell>AC</cell>
-                        <cell>AC</cell>
+                        <cell>AC + GDP</cell>
+                        <cell>AC + GDP</cell>
                     </row>
                     <row>
                         <cell>Java</cell>
@@ -4112,6 +4114,12 @@
                         <cell>AC</cell>
                     </row>
                     <row>
+                        <cell>Pyret</cell>
+                        <cell><c>pyret</c></cell>
+                        <cell>AC + check</cell>
+                        <cell>AC + check</cell>
+                    </row>
+                    <row>
                         <cell>SQL</cell>
                         <cell><c>sql</c></cell>
                         <cell>AC</cell>
@@ -4125,7 +4133,7 @@
                     </row>
                     <!-- should really be a note, or similar -->
                     <row>
-                        <cell halign="left" colspan="4">AC = ActiveCode, CL = CodeLens, UT = Unit Tests (parsed), IO = IO Tests</cell>
+                        <cell halign="left" colspan="4">AC = ActiveCode, CL = CodeLens, UT = Unit Tests (parsed), IO = IO Tests, GDP = GDPractice Tests, check = pyret's testing protocol</cell>
                     </row>
                 </tabular>
             </table>
